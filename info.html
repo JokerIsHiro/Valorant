@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT</title>
+    <link href="css/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script/info_agent.js" defer></script>
+    <script src="script/theme.js" defer></script>
+</head>
+
+<body class="bg-light-bg dark:bg-dark-bg text-white dark:text-white transition-colors duration-500">
+    <header
+        class="relative flex flex-wrap justify-center md:flex-nowrap w-full bg-neutral-800 text-sm py-3 dark:bg-red-500 transition-colors duration-500">
+        <nav class="max-w-[85rem] w-full mx-auto flex items-center justify-between">
+            <div class="flex items-center justify-between">
+                <div class="md:hidden lg:hidden">
+                    <button type="button"
+                        class="hs-collapse-toggle relative size-7 flex justify-center items-center gap-x-2 rounded-lg border border-gray-200 bg-white text-white shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-transparent dark:border-neutral-700 dark:text-white dark:hover:bg-white/10 dark:focus:bg-white/10"
+                        id="hs-navbar-collapse" aria-expanded="false" aria-controls="hs-navbar"
+                        aria-label="Toggle navigation" data-hs-collapse="#hs-navbar">
+                        <i class="fas fa-bars"></i>
+                        <span class="sr-only">Toggle navigation</span>
+                    </button>
+                </div>
+            </div>
+            <div id="hs-navbar"
+            class="hidden hs-collapse overflow-hidden basis-full grow md:flex md:items-center md:justify-center md:static absolute top-full left-0 w-full bg-neutral-800 dark:bg-red-500 transition-colors duration-500">
+                <div class="flex flex-col gap-5 md:flex-row md:items-center md:justify-center md:ps-5">
+                    <a class="font-medium text-white hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-dark-text dark:hover:text-white dark:focus:text-neutral-500 ml-4"
+                        href="index.html">Agentes</a>
+                    <a class="font-medium text-white hover:text-gray-400 focus:outline-none focus:text-gray-400 dark:text-dark-text dark:hover:text-white dark:focus:text-neutral-500 ml-4"
+                        href="maps.html">Mapas</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main id="container" class="h-full w-full flex flex-col lg:flex-row overflow-hidden bg-light-bg dark:bg-dark-bg text-light-text dark:text-dark-text">
+        <div class="w-full h-1/2 lg:w-1/2 lg:h-full flex-shrink-0">
+            <img id="portrait" alt="Imagen del agente" class="w-full h-[85%] object-cover" />
+        </div>
+        <div class="w-full h-1/2 md:h-2/4 md:w-1/2 flex flex-col justify-center p-6">
+            <div class="mb-6">
+                <h2 id="agentName" class="text-3xl font-bold">
+                </h2>
+                <p id="agentDesc" class="leading-relaxed mt-2">
+                </p>
+            </div>
+            <div>
+                <h3 class="text-2xl font-semibold mb-4 items-center">
+                    Habilidades
+                </h3>
+                <div class="flex flex-wrap items-center justify-center gap-4 text-white">
+                    <div id="slot1"
+                        class="flex items-center space-x-2 bg-gray-200 dark:bg-neutral-700 p-2 rounded-lg md:w-[48%] lg:w-[23%] transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                        <img id="skill1" alt="Habilidad 1" class="w-8 h-8 object-cover" />
+                        <span id="name1" class="text-sm">
+                        </span>
+                    </div>
+                    <div id="slot2"
+                        class="flex items-center space-x-2 bg-gray-200 dark:bg-neutral-700 p-2 rounded-lg md:w-[48%] lg:w-[23%] transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                        <img id="skill2" alt="Habilidad 2" class="w-8 h-8 object-cover" />
+                        <span id="name2" class="text-sm">
+                        </span>
+                    </div>
+                    <div id="slot3"
+                        class="flex items-center space-x-2 bg-gray-200 dark:bg-neutral-700 p-2 rounded-lg md:w-[48%] lg:w-[23%] transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                        <img id="skill3" alt="Habilidad 3" class="w-8 h-8 object-cover" />
+                        <span id="name3" class="text-sm">
+                        </span>
+                    </div>
+                    <div id="slot4"
+                        class="flex items-center space-x-2 bg-gray-200 dark:bg-neutral-700 p-2 rounded-lg md:w-[48%] lg:w-[23%] transition duration-300 ease-in-out hover:scale-110 cursor-pointer">
+                        <img id="skill4" alt="Habilidad 4" class="w-8 h-8 object-cover" />
+                        <span id="name4" class="text-sm">
+                        </span>
+                    </div>
+                </div>
+                <div id="skillDesc" class="hidden items-center space-x-2 mt-4 bg-gray-200 dark:bg-neutral-700 p-5 rounded-lg w-full md:w-[48%] lg:w-full">
+                    <span id="desc" class="text-sm text-white">
+                    </span>
+            </div>
+        </div>
+    </main>
+    <div class="fixed bottom-4 right-4">
+        <img src="assets/dark_bug.png" alt="Cambiar de tema Oscuro a Claro"
+            class="dark cursor-pointer w-[48px] h-[48px] transition duration-300 hover:scale-125">
+        <img src="assets/light_bug.png" alt="Cambiar de tema Claro a Oscuro"
+            class="light cursor-pointer w-[48px] h-[48px] transition duration-300 hover:scale-125">
+    </div>
+    <footer>
+
+    </footer>
+</body>
+
+</html> 
